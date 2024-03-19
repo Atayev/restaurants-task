@@ -2,9 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import MainLayout from "./components/layout";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import ErrorPage from "./pages/Error";
+import { ErrorPage, Home, NotFound } from "./pages";
 
 function App() {
   return (

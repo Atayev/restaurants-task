@@ -7,7 +7,9 @@ const MainLayout = () => {
     <>
       <ThemeProvider>
         <Header />
-        <Outlet />
+        <div className="container mx-auto">
+          <Outlet />
+        </div>
       </ThemeProvider>
     </>
   );
