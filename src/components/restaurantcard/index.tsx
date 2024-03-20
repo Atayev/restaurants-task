@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Card,
   CardContent,
@@ -7,9 +7,8 @@ import {
   CardTitle,
 } from "../ui/card";
 import { Badge } from "../ui/badge";
-import ReserveForm from "../reserveform";
 import { Button } from "../ui/button";
-import { Link, useNavigate, useNavigation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface RestaurantCardProps {
   restaurant: Restaurant;
@@ -17,10 +16,7 @@ interface RestaurantCardProps {
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({ restaurant }) => {
   const { available_tables, category, hours, id, image, name } = restaurant;
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
+
   return (
     <Card className="shadow-md">
       <CardHeader className="p-2">
@@ -50,10 +46,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({ restaurant }) => {
         </p>
       </CardContent>
       <CardFooter className="flex items-center w-full justify-end">
-        {/* <Button variant="secondary">
-          <Link to={`/${id}`}>Reserve</Link>
-        </Button> */}
-        {/* <ReserveForm restaurantId={id} /> */}
+        s{" "}
         <Button variant="secondary">
           <Link to={`restaurant/${id}`}>Reserve</Link>
         </Button>
