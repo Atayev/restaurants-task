@@ -46,7 +46,6 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({ restaurant }) => {
         </p>
       </CardContent>
       <CardFooter className="flex items-center w-full justify-end">
-        s{" "}
         <Button variant="secondary">
           <Link to={`restaurant/${id}`}>Reserve</Link>
         </Button>
