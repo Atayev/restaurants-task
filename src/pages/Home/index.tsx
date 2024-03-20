@@ -25,8 +25,8 @@ const Home = () => {
   );
 
   return (
-    <div>
-      <div className="ml-[110px] mt-4 w-full">
+    <div className="md:p-10 p-4">
+      <div className="md:ml-[110px] mt-4 w-full">
         <SearchInput onSearch={setSearch} />
       </div>
       <div className="gap-4 flex flex-wrap justify-center md:flex-row flex-col py-5">

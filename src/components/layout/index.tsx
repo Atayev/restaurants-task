@@ -1,6 +1,7 @@
 import Header from "./header";
 import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "../themeprovider";
+import { Toaster } from "../ui/toaster";
 
 const MainLayout = () => {
   return (
@@ -10,6 +11,7 @@ const MainLayout = () => {
         <div className="container mx-auto">
           <Outlet />
         </div>
+        <Toaster />
       </ThemeProvider>
     </>
   );
