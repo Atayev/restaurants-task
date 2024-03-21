@@ -33,7 +33,6 @@ const MyReservations = () => {
             reservations.map((reservation) => reservation.restaurant_id)
           ),
         ];
-        console.log(restaurantIds);
 
         return Promise.all(
           restaurantIds.map((id) =>

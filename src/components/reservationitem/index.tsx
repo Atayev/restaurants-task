@@ -35,7 +35,7 @@ const ReservationItem: React.FC<ReservationItemProps> = ({
       </AccordionTrigger>
       <AccordionContent className="bg-primary-foreground rounded-t-lg">
         {reservations.map((reservation) => {
-          const formattedDate = new Date(reservation.date).toLocaleDateString(
+          const formattedDate = new Date(reservation?.date).toLocaleDateString(
             "en-Us",
             {
               weekday: "long",
@@ -51,11 +51,11 @@ const ReservationItem: React.FC<ReservationItemProps> = ({
             >
               <InfoBadge
                 label="Reservation ID:"
-                text={reservation.reservation_id}
+                text={reservation?.reservation_id}
               />
               <InfoBadge label="Reservation Date:" text={formattedDate} />
-              <InfoBadge label="Reservation Time:" text={reservation.time} />
-              <InfoBadge label="For:" text={`${reservation.guests} people`} />
+              <InfoBadge label="Reservation Time:" text={reservation?.time} />
+              <InfoBadge label="For:" text={`${reservation?.guests} people`} />
             </div>
           );
         })}
